@@ -1,0 +1,77 @@
+table, th, td {
+    border: 2px solid black;
+}
+table{
+    width: 100%;
+}
+tr:nth-child(even){
+    background-color: #dddddd;
+}
+body {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+header, section, article, aside, footer, main {
+    border: 2px solid silver;
+    border-radius: 5px;
+    padding: 5px;
+}
+
+body {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+}
+
+header {
+    grid-row:1;
+    grid-column:1/6;
+}
+
+footer {
+    grid-row:3;
+    grid-column:1/6;
+    height: 100px;
+}
+
+main {
+    grid-row:2;
+    grid-column:2/6;
+}
+aside {
+    grid-row:2;
+    grid-column:1/2;
+}
+
+img {
+    width: 60%;
+}
+section {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+/*
+Productos
+*/
+#contenedorDeProductos {
+    display: grid;
+    grid-template-columns:repeat(2, 1fr);
+    grid-gap: 5px;
+}
+
+
+@media only screen and (max-width: 600px) {
+    /* For mobile phones: */
+    body {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    #contenedorDeProductos {
+        display: grid;
+        grid-template-columns:repeat(1, 1fr);
+    }
+    aside {
+        display: none;
+    }
+}
